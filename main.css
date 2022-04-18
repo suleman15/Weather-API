@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background: #43affc;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.wrapper {
+  background: white;
+  width: 400px;
+  border-radius: 8px;
+}
+.wrapper > header {
+  color: #43affc;
+  padding: 15px 16px;
+  margin: 0px 5px;
+  font-size: 1.9em;
+  border-bottom: 1px solid #ccc;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header i {
+  font-size: 0em;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.wrapper.active header i {
+  font-size: 1.7em;
+}
+/* input part */
+.input-part{
+  padding: 20px 15px;
+}
+.input-part  :where(input, button) {
+  width: 100%;
+  height: 55px;
+  font-size: 1.5em;
+  outline: none;
+  border-radius: 7px;
+}
+.input-part  input {
+  padding: 0px 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.input-part  input:is(:focus, :valid) {
+  border: 2px solid #43affc;
+}
+.input-part  button {
+  background: #43affc;
+  border: 1px solid #43affc;
+  color: white;
+}
+
+.input-part  .seperator {
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  margin: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-part  .seperator:before {
+  content: "or";
+  font-size: 1.6em;
+  background: white;
+  color: #ccc;
+  padding: 0px 25px;
+}
+
+.input-part .info-txt {
+  height: 55px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  border-radius: 5px;
+  margin-bottom: .8em;
+}
+
+.input-part .info-txt.error{
+  color: #721c24;
+  display: flex;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.input-part .info-txt.pending{
+  color: #0c5460;
+  display: flex;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+
+.wrapper.active .input-part {
+  display: none;
+}
+
+/* //weather part */
+
+.weather-part {
+    padding: 20px 0px 0px;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+.weather-part > img {
+    width: 30%;
+    min-width: 2em;
+}
+.weather-part > .temp {
+    font-size: 8em;
+    display: flex;
+    margin: 10px 0px ;
+    gap: 1px;
+    align-items: flex-start;
+}
+.weather-part > .temp > .deg {
+    font-size: 39px;
+    margin-top: 10px
+}
+
+.weather {
+  font-size: 2em;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  margin-bottom: 20px;
+
+}
+.location span {
+  font-size: 1.7em;
+}
+.location i {
+  font-size: 2.5em;
+  color: #43affc
+}
+.bottom-details {
+
+  border-top: 2px solid #ccc;
+  width: 100%;
+  margin: 20px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-details i {
+  color: #43affc;
+  font-size: 3em;
+}
+.columns  {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  gap:10px
+}
+.columns .details {
+  font-size: 1.3em;
+  line-height: .9;
+}
+.details :where(.temp, span) {
+  font-weight: 600;
+}
+
+.wrapper.active .weather-part {
+  display: flex !important;
+}
+.columns.humidity {
+  border-left: 2px solid #ccc;
+
+}
+

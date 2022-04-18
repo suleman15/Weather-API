@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Using API</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="wrapper active">
+        <header>
+          <i class="bx bx-left-arrow-alt"></i>
+          Weather App
+        </header>
+        <section class="input-part" >
+          <div class="info-txt"></div>
+          <div class="content">
+            <input type="text" name="text" id="txt" spellcheck=false placeholder='Enter City Name' required>
+            <div class="seperator"></div>
+            <button>Get Device Location</button>
+          </div>
+        </section>
+        <section class="weather-part">
+          <img src="icons/clear.svg" alt="Weather Icon">
+          <div class="temp">
+            <div class="numb">25</div>
+            <div class="deg">°</div>C
+          </div>
+          <div class="weather">haze</div>
+          <div class="location">
+            <i class="bx bx-map"></i>
+            <span>Sukkur, Pakistan</span>
+          </div>
+          <div class="bottom-details">
+            <div class="columns feel">
+              <i class='bx bxs-thermometer'></i>
+              <div class="details">
+                <div class="temp">
+                  <span class="numb-2">25</span>
+                  <span class="deg">°</span>C
+                </div>
+                <p>Feels like</p>
+              </div>
+            </div>
+            <div class="columns humidity">
+              <i class='bx bxs-droplet-half'></i>
+              <div class="details">
+                <span>14%</span>
+                <p>Humidity</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div> 
+      <script src="main.js"></script>   
+</body>
+</html>
+
+
